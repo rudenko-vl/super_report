@@ -45,7 +45,8 @@ img {
     text-decoration: none;
 }
 
-.btn {
+.btn,
+.btn-2 {
     display: block;
     background-color: blue;
     color: white;
@@ -55,7 +56,7 @@ img {
     border-radius: 6px;
     border: none;
     cursor: pointer;
-    margin: 80px auto 0px auto;
+    margin: 80px auto 20px auto;
 }
 
 .btn:hover {
@@ -77,7 +78,8 @@ img {
     padding: 40px;
 }
 
-.text {
+.text,
+.text-2 {
     text-align: center;
     font-size: 32px;
     font-weight: 600;
@@ -85,7 +87,8 @@ img {
     text-shadow: 0.7px 0.7px 1px #1a2432;
 }
 
-.spinner {
+.spinner,
+.spinner-2 {
     margin: 0 auto;
     width: 60px;
     height: 60px;
