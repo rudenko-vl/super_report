@@ -23,12 +23,13 @@ const getSecondText = () => {
         spinner2.classList.add("visually-hidden");
         txt2.classList.remove("visually-hidden");
         if (randomText === 'Всё ок, никто не виноват!') {
-            txt2.textContent = 'С кем ты хочешь разобраться? :)'
+            txt2.textContent = 'С кем ты хочешь разобраться? 😎'
         }
         else {
-            txt2.textContent = 'Проведена работа с нарушителем. Ошибка больше не повторится!';
+            txt2.textContent = 'Проведена работа с нарушителем 🚑. Ошибка больше не повторится!';
         }
     }, 2000)
+    btn2.disabled = true;
 }
 
 
@@ -44,6 +45,7 @@ const setText = () => {
     txt.textContent = ''
     txt2.classList.add("visually-hidden");
     btn2.classList.add("visually-hidden");
+    btn2.disabled = false;
     setTimeout(() => {
         spinner.classList.add("visually-hidden");
     }, 3000)
