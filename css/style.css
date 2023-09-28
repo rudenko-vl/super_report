@@ -1,0 +1,106 @@
+body {
+    background-color: rgb(249, 252, 106);
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.btn {
+    display: block;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin: 80px auto 0px auto;
+}
+
+.btn:hover {
+    background-color: rgb(62, 62, 236);
+    color: rgb(94, 231, 185);
+}
+
+.header {
+    background-color: rgb(81, 176, 231);
+    padding: 20px 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 24px;
+    text-shadow: 0.7px 0.7px 1px #494949;
+}
+
+.box {
+    margin: 20px auto;
+    padding: 40px;
+}
+
+.text {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: blue;
+    text-shadow: 0.7px 0.7px 1px #1a2432;
+}
+
+.spinner {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
