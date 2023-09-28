@@ -103,7 +103,8 @@ img {
 }
 
 .text,
-.text-2 {
+.text-2,
+.text-3 {
     text-align: center;
     font-size: 22px;
     font-weight: 600;
@@ -111,10 +112,15 @@ img {
     text-shadow: 0.7px 0.7px 1px #1a2432;
 }
 
+.text-3 {
+    margin-top: 15px;
+}
+
 @media screen and (min-width: 600px) {
 
     .text,
-    .text-2 {
+    .text-2,
+    .text-3 {
         font-size: 32px;
     }
 }

@@ -8,7 +8,10 @@ const texts = [
     "Виноват Маштепа Ростислав Борисович",
     "Виноват Пастушенко Сергій Євгенович",
     "Виноват Уланов Олексій Володимирович",
-    "Виноват Труш Микола Миколайович"
+    "Виноват Труш Микола Миколайович",
+    "Виноват Клюй Олександр Анатолійович",
+    "Виноват Чухліб Олександр Юрійович",
+    "Виноват Мазур Юрій Олександрович",
 ];
 let randomText = ''
 const getRandomText = () => {
@@ -18,18 +21,24 @@ const getRandomText = () => {
 }
 
 const getSecondText = () => {
-    spinner2.classList.remove("visually-hidden");
+    const name = randomText.substring(8);
+    const content = `Проведена работа с ${name} 🚑`
+    spinner.classList.remove("visually-hidden");
     setTimeout(() => {
-        spinner2.classList.add("visually-hidden");
+        spinner.classList.add("visually-hidden");
         txt2.classList.remove("visually-hidden");
+        txt3.classList.remove("visually-hidden");
         if (randomText === 'Всё ок, никто не виноват!') {
             txt2.textContent = 'С кем ты хочешь разобраться? 😎'
+            txt3.textContent = ''
         }
         else {
-            txt2.textContent = 'Проведена работа с нарушителем 🚑. Ошибка больше не повторится!';
+            txt2.textContent = content;
+            txt3.textContent = 'Ошибка больше не повторится!';
         }
     }, 2000)
-    btn2.disabled = true;
+    txt.classList.add("visually-hidden");
+    btn2.classList.add("visually-hidden");
 }
 
 
@@ -38,24 +47,26 @@ const btn = document.querySelector(".btn");
 const btn2 = document.querySelector(".btn-2");
 const txt = document.querySelector(".text");
 const txt2 = document.querySelector(".text-2");
+const txt3 = document.querySelector(".text-3");
 const spinner = document.querySelector(".spinner");
-const spinner2 = document.querySelector(".spinner-2");
 
 const setText = () => {
     txt.textContent = ''
     txt2.classList.add("visually-hidden");
+    txt3.classList.add("visually-hidden");
     btn2.classList.add("visually-hidden");
     btn2.disabled = false;
     setTimeout(() => {
         spinner.classList.add("visually-hidden");
-    }, 3000)
+    }, 1000)
     setTimeout(() => {
         txt.textContent = randomText;
         btn2.classList.remove("visually-hidden");
-    }, 3200)
+    }, 1200)
 }
 
 btn.addEventListener("click", () => {
+    txt.classList.remove("visually-hidden");
     getRandomText()
     spinner.classList.remove("visually-hidden");
     setText()
