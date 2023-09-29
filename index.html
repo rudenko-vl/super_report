@@ -11,7 +11,7 @@
 <body>
     <header class="header">
         <h1 class="header-title">Отчет по всем процессам склада</h1>
-
+        <button type="button" class="tooltip-button">Отчет №2</button>
     </header>
     <button class="btn btn-common">Строить отчет</button>
     <div class="box">
@@ -22,7 +22,14 @@
         <p class="text-3 visually-hidden"></p>
         <button class="btn-3 btn-common visually-hidden">Ок</button>
     </div>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <p class="counter"></p>
+        </div>
+    </div>
     <script src="./js/app.js" type="module"></script>
+    <script src="./js/modal.js" type="module"></script>
+    <script src="./js/total.js" type="module"></script>
 </body>
 
 </html>
