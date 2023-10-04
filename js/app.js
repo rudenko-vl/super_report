@@ -1,22 +1,14 @@
-const texts = [
-    "Всё ок, никто не виноват!",
-    "Виноват Беленок Юрій Васильович",
-    "Виноват Борисенко Андрій Вікторович",
-    "Виноват Верес Олег Юзефович",
-    "Виноват Делегей Олександр Володимирович",
-    "Виноват Іванов Сергій Олександрович",
-    "Виноват Маштепа Ростислав Борисович",
-    "Виноват Пастушенко Сергій Євгенович",
-    "Виноват Уланов Олексій Володимирович",
-    "Виноват Труш Микола Миколайович",
-    "Виноват Клюй Олександр Анатолійович",
-    "Виноват Чухліб Олександр Юрійович",
-    "Виноват Мазур Юрій Олександрович",
-];
-let randomText = ''
+import { workers } from "./employes.js";
+
+let randomText = '';
+
 const getRandomText = () => {
-    const randomIndex = Math.floor(Math.random() * texts.length);
-    randomText = texts[randomIndex];
+    const randomIndex = Math.floor(Math.random() * workers.length);
+    randomText = workers[randomIndex];
+    const namesArray = JSON.parse(localStorage.getItem('names')) || [];
+    namesArray.push(randomText.substring(8))
+    localStorage.setItem('names', JSON.stringify(namesArray));
+
     return randomText;
 }
 
@@ -60,11 +52,11 @@ const setText = () => {
     btn3.classList.add("visually-hidden");
     setTimeout(() => {
         spinner.classList.add("visually-hidden");
-    }, 2000)
+    }, 1000)
     setTimeout(() => {
         txt.textContent = randomText;
         btn2.classList.remove("visually-hidden");
-    }, 2200)
+    }, 1200)
 }
 
 btn.addEventListener("click", () => {
