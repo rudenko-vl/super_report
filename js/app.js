@@ -6,8 +6,20 @@ const getRandomText = () => {
     const randomIndex = Math.floor(Math.random() * workers.length);
     randomText = workers[randomIndex];
     const namesArray = JSON.parse(localStorage.getItem('names')) || [];
-    namesArray.push(randomText.substring(8))
-    localStorage.setItem('names', JSON.stringify(namesArray));
+    const fullName = randomText.substring(8);
+    const words = fullName.split(' ');
+    const name = words[0] + ' ' + words.slice(1).map(function (word) {
+        return word.charAt(0) + '.';
+    }).join(' ');
+
+    if (name == "никто н. в.") {
+        namesArray.push('Никто не виноват');
+        localStorage.setItem('names', JSON.stringify(namesArray));
+    }
+    else {
+        namesArray.push(name)
+        localStorage.setItem('names', JSON.stringify(namesArray));
+    }
 
     return randomText;
 }
