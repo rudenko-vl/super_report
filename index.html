@@ -20,8 +20,30 @@
         <div class="spinner visually-hidden"></div>
         <p class="text"></p>
         <button class="btn-2 btn-common visually-hidden">Разобраться 🪓</button>
+
         <p class="text-2 visually-hidden"></p>
-        <p class="text-3 visually-hidden"></p>
+        <div class="text-3 visually-hidden">
+            <ul class="list short-list">
+                <li class="short-list_item" id="item1">
+                    <input type="checkbox" class="input" id="checkbox1">
+                    <p>Подсветить ошибку</p>
+                </li>
+                <li class="short-list_item" id="item2">
+                    <input type="checkbox" class="input" id="checkbox2">
+                    <p>Проговорить ошибку</p>
+                </li>
+                <li class="short-list_item" id="item3">
+                    <input type="checkbox" class="input" id="checkbox3">
+                    <p>Акцентировать внимание</p>
+                </li>
+                <li class="short-list_item red-item" id="item4">
+                    <input type="checkbox" class="input" id="checkbox4">
+                    <p>Расстрелять!</p>
+                </li>
+            </ul>
+        </div>
+        <button class="btn-4 btn-common visually-hidden" id="done_btn">Выполнить</button>
+        <p class="last-text visually-hidden text">Сделано!</p>
         <button class="btn-3 btn-common visually-hidden">Ок</button>
     </div>
     <div class="backdrop is-hidden" data-modal>
@@ -38,6 +60,7 @@
     <script src="./js/modal.js" type="module"></script>
     <script src="./js/total.js" type="module"></script>
     <script src="./js/second_modal.js" type="module"></script>
+    <script src="./js/helper.js" type="module"></script>
 </body>
 
 </html>

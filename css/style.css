@@ -99,7 +99,8 @@ img {
 
 .btn,
 .btn-2,
-.btn-3 {
+.btn-3,
+.btn-4 {
     display: block;
     background-color: blue;
     color: white;
@@ -253,8 +254,9 @@ img {
     text-shadow: 0.7px 0.7px 1px #1a2432;
 }
 
-.text-3 {
-    margin-top: 15px;
+.text-3,
+.text-2 {
+    margin-top: 20px;
 }
 
 @media screen and (min-width: 600px) {
@@ -320,4 +322,36 @@ img {
 .canvas {
     background-color: azure;
     padding: 30px 60px 30px 30px;
+}
+
+.short-list {
+    width: 500px;
+    height: 300px;
+    border: 3px solid black;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.short-list_item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.short-list_item:hover {
+    cursor: pointer;
+    color: green;
+}
+
+.input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.red-item:hover {
+    cursor: pointer;
+    color: red;
 }
