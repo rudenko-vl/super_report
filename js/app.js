@@ -40,8 +40,6 @@ const getSecondText = () => {
 }
 
 
-
-
 const btn = document.querySelector(".btn");
 const btn2 = document.querySelector(".btn-2");
 const btn3 = document.querySelector(".btn-3");
@@ -69,6 +67,7 @@ const setText = () => {
 
 btn.addEventListener("click", () => {
     txt.classList.remove("visually-hidden");
+    btn4.classList.add("visually-hidden");
     getRandomText()
     spinner.classList.remove("visually-hidden");
     setText()
