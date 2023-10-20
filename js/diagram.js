@@ -1,4 +1,4 @@
-const savedStrings = JSON.parse(localStorage.getItem('gangsters')) || ['Еще никто не был виноват)'];
+const savedStrings = JSON.parse(localStorage.getItem('culprits')) || ['Еще никто не был виноват)'];
 
 const counts = new Map();
 

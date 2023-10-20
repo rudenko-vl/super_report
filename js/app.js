@@ -5,7 +5,7 @@ let randomText = '';
 const getRandomText = () => {
     const randomIndex = Math.floor(Math.random() * workers.length);
     randomText = workers[randomIndex];
-    const namesArray = JSON.parse(localStorage.getItem('gangsters')) || [];
+    const namesArray = JSON.parse(localStorage.getItem('culprits')) || [];
     const fullName = randomText.substring(8);
     const words = fullName.split(' ');
     const name = words[0] + ' ' + words.slice(1).map(function (word) {
@@ -14,11 +14,11 @@ const getRandomText = () => {
 
     if (name == "никто н. в.") {
         namesArray.push('Никто не виноват');
-        localStorage.setItem('gangsters', JSON.stringify(namesArray));
+        return
     }
     else {
         namesArray.push(name)
-        localStorage.setItem('gangsters', JSON.stringify(namesArray));
+        localStorage.setItem('culprits', JSON.stringify(namesArray));
     }
 
     return randomText;
