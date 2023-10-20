@@ -120,6 +120,10 @@ img {
     margin: 80px auto 20px auto;
 }
 
+.disabled_btn {
+    background-color: rgb(153, 153, 160);
+}
+
 .tooltip-button {
     position: relative;
     background-color: blue;
@@ -350,8 +354,7 @@ img {
 
 .short-list {
     height: auto;
-    min-width: 250px;
-    max-width: 500px;
+    max-width: 400px;
     border: 3px solid black;
     border-radius: 6px;
     padding: 10px;

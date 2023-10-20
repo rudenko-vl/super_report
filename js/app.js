@@ -26,6 +26,7 @@ const getRandomText = () => {
 
 const getSecondText = () => {
     btn4.disabled = true;
+    btn4.classList.add("disabled_btn");
     txt2.classList.remove("visually-hidden");
     if (randomText === 'Всё ок, никто не виноват!') {
         txt2.classList.remove("visually-hidden");
@@ -49,6 +50,7 @@ const txt2 = document.querySelector(".text-2");
 const txt3 = document.querySelector(".text-3");
 const last_text = document.querySelector(".last-text");
 const spinner = document.querySelector(".spinner");
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
 const setText = () => {
     txt.textContent = ''
@@ -81,6 +83,18 @@ btn3.addEventListener("click", () => {
     location.reload();
 });
 
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+        const atLeastOneChecked = Array.from(checkboxes).some((checkbox) => checkbox.checked);
+        btn4.disabled = !atLeastOneChecked;
+        if (atLeastOneChecked) {
+            btn4.classList.remove("disabled_btn");
+        } else {
+            btn4.classList.add("disabled_btn");
+        }
+    });
+});
+
 btn4.addEventListener("click", () => {
     btn.classList.add("visually-hidden");
     txt2.classList.add("visually-hidden");
@@ -94,3 +108,5 @@ btn4.addEventListener("click", () => {
         btn3.classList.remove("visually-hidden");
     }, 1000)
 });
+
+
