@@ -11,9 +11,11 @@
 <body>
     <header class="header">
         <h1 class="header-title">Отчет по всем процессам склада</h1>
-        <button type="button" class="tooltip-button">Отчет №2</button>
-        <button type="button" class="tooltip-button tooltip">Отчет №3</button>
-        <a class="nav-link" href="./diagram.html">График</a>
+        <div class="navigate">
+            <button type="button" class="tooltip-button">Отчет №2</button>
+            <button type="button" class="tooltip-button tooltip">Отчет №3</button>
+            <a class="nav-link" href="./diagram.html">График</a>
+        </div>
     </header>
     <button class="btn btn-common">Строить отчет</button>
     <div class="box">
@@ -26,19 +28,19 @@
             <ul class="list short-list">
                 <li class="short-list_item" id="item1">
                     <input type="checkbox" class="input" id="checkbox1">
-                    <p>Подсветить ошибку</p>
+                    <label>Подсветить ошибку</label>
                 </li>
                 <li class="short-list_item" id="item2">
                     <input type="checkbox" class="input" id="checkbox2">
-                    <p>Проговорить ошибку</p>
+                    <label>Проговорить ошибку</label>
                 </li>
                 <li class="short-list_item" id="item3">
                     <input type="checkbox" class="input" id="checkbox3">
-                    <p>Акцентировать внимание</p>
+                    <label>Акцентировать внимание</label>
                 </li>
                 <li class="short-list_item red-item" id="item4">
                     <input type="checkbox" class="input" id="checkbox4">
-                    <p>Расстрелять!</p>
+                    <label>Расстрелять!</label>
                 </li>
             </ul>
         </div>
