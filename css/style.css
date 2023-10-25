@@ -491,9 +491,15 @@ img {
     height: 80%;
     padding: 20px;
     margin: 40px auto;
+    background-color: #1a2432;
+}
+
+.mob-list {
+    width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #1a2432;
+    align-items: center;
+    flex-direction: column;
 }
 
 .mob-item {
@@ -504,10 +510,14 @@ img {
     margin-top: 20px;
 }
 
-.mob-item {
+.mob-link {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 700;
     font-size: 24px;
     text-shadow: 0.7px 0.7px 1px #494949;
+}
+
+.mob-item:hover {
+    color: #ffb800;
 }
