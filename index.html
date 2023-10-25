@@ -10,58 +10,83 @@
 
 <body>
     <header class="header">
-        <h1 class="header-title">Отчет по всем процессам склада</h1>
+        <a href="/">
+            <img class="logo" src="./img/amtel.png" alt="amtel">
+        </a>
+        <button class="menu-toggle" type="button" data-menu-open>
+            <span class="burger-icon"></span>
+            <span class="burger-icon"></span>
+            <span class="burger-icon"></span>
+        </button>
         <div class="navigate">
             <button type="button" class="tooltip-button">Отчет №2</button>
             <button type="button" class="tooltip-button tooltip">Отчет №3</button>
             <a class="nav-link" href="./diagram.html">График</a>
         </div>
     </header>
-    <button class="btn btn-common">Строить отчет</button>
-    <div class="box">
-        <div class="spinner visually-hidden"></div>
-        <p class="text"></p>
-        <button class="btn-2 btn-common visually-hidden">Разобраться 🪓</button>
+    <main>
+        <h1 class="main-title">Отчет по всем процессам склада</h1>
+        <button class="btn btn-common">Строить отчет</button>
+        <div class="box">
+            <div class="spinner visually-hidden"></div>
+            <p class="text"></p>
+            <button class="btn-2 btn-common visually-hidden">Разобраться 🪓</button>
 
-        <p class="text-2 visually-hidden"></p>
-        <div class="text-3 visually-hidden">
-            <ul class="list short-list">
-                <li class="short-list_item" id="item1">
-                    <input type="checkbox" class="input" id="checkbox1">
-                    <label>Подсветить ошибку</label>
+            <p class="text-2 visually-hidden"></p>
+            <div class="text-3 visually-hidden">
+                <ul class="list short-list">
+                    <li class="short-list_item" id="item1">
+                        <input type="checkbox" class="input" id="checkbox1">
+                        <label>Подсветить ошибку</label>
+                    </li>
+                    <li class="short-list_item" id="item2">
+                        <input type="checkbox" class="input" id="checkbox2">
+                        <label>Проговорить ошибку</label>
+                    </li>
+                    <li class="short-list_item" id="item3">
+                        <input type="checkbox" class="input" id="checkbox3">
+                        <label>Акцентировать внимание</label>
+                    </li>
+                    <li class="short-list_item red-item" id="item4">
+                        <input type="checkbox" class="input" id="checkbox4">
+                        <label>Расстрелять!</label>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn-4 btn-common visually-hidden" id="done_btn">Выполнить</button>
+            <p class="last-text visually-hidden text">Сделано!</p>
+            <button class="btn-3 btn-common visually-hidden">Ок</button>
+        </div>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <p class="counter"></p>
+            </div>
+        </div>
+        <div class="backdrop2 is-hidden" data-modal2>
+            <div class="modal">
+                <p class="second-counter counter"></p>
+            </div>
+        </div>
+    </main>
+    <div class="mobile-menu" data-menu>
+        <span class="close-mob-btn" data-menu-close></span>
+        <div class="mob-container">
+            <ul class="list">
+                <li>
+                    <a class="mob-item " href="./diagram.html">График</a>
                 </li>
-                <li class="short-list_item" id="item2">
-                    <input type="checkbox" class="input" id="checkbox2">
-                    <label>Проговорить ошибку</label>
-                </li>
-                <li class="short-list_item" id="item3">
-                    <input type="checkbox" class="input" id="checkbox3">
-                    <label>Акцентировать внимание</label>
-                </li>
-                <li class="short-list_item red-item" id="item4">
-                    <input type="checkbox" class="input" id="checkbox4">
-                    <label>Расстрелять!</label>
-                </li>
+                <li class="mob-item" id="rep2">Отчет №2</li>
+                <li class="mob-item visually-hidden" id="report2-result">
+                <li>
             </ul>
-        </div>
-        <button class="btn-4 btn-common visually-hidden" id="done_btn">Выполнить</button>
-        <p class="last-text visually-hidden text">Сделано!</p>
-        <button class="btn-3 btn-common visually-hidden">Ок</button>
-    </div>
-    <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-            <p class="counter"></p>
-        </div>
-    </div>
-    <div class="backdrop2 is-hidden" data-modal2>
-        <div class="modal">
-            <p class="second-counter counter"></p>
         </div>
     </div>
     <script src="./js/app.js" type="module"></script>
     <script src="./js/modal.js" type="module"></script>
     <script src="./js/total.js" type="module"></script>
     <script src="./js/second_modal.js" type="module"></script>
+    <script src="./js/mob_menu.js" type="module"></script>
+    <script src="./js/mob_report.js" type="module"></script>
 </body>
 
 </html>

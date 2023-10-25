@@ -134,6 +134,7 @@ img {
     border-radius: 6px;
     border: none;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 .tooltip-button::before {
@@ -157,17 +158,6 @@ img {
     visibility: visible;
 }
 
-.tooltip {
-    position: relative;
-    background-color: blue;
-    color: white;
-    padding: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-}
 
 .tooltip::before {
     content: "Отчёт по кол-ву построенных отчётов №2!";
@@ -189,7 +179,6 @@ img {
     opacity: 1;
     visibility: visible;
 }
-
 
 .btn-hover {
     width: 130px;
@@ -214,7 +203,7 @@ img {
 }
 
 .header {
-
+    display: flex;
     align-items: center;
     background-color: rgb(81, 176, 231);
     padding: 20px 30px;
@@ -227,29 +216,44 @@ img {
 
 }
 
-.navigate {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 30px auto 0px auto;
-    max-width: 600px;
+.logo {
+    width: 200px;
+    height: 50px;
 }
 
-.header-title {
-    color: rgb(255, 255, 255);
+.navigate {
+    display: none;
+    margin-left: auto;
+    max-width: 400px;
+}
+
+@media screen and (min-width: 768px) {
+    .navigate {
+        display: block;
+    }
+}
+
+.navigate:not(:last-child) {
+    margin-right: 15px;
+}
+
+.main-title {
+    color: rgb(0, 0, 0);
     text-align: center;
     font-size: 24px;
-    text-shadow: 0.7px 0.7px 1px #494949;
+    text-shadow: 0.7px 0.7px 1px #dbd0d0;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 @media screen and (min-width: 600px) {
-    .header-title {
+    .main-title {
         font-size: 30px;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .header-title {
+    .main-title {
         font-size: 44px;
     }
 }
@@ -331,6 +335,7 @@ img {
     font-weight: 700;
     font-size: 20px;
     text-shadow: 0.7px 0.7px 1px #494949;
+    margin-left: auto;
 }
 
 @media screen and (min-width: 600px) {
@@ -341,10 +346,6 @@ img {
 
 .nav-link:hover {
     color: #ffb800;
-}
-
-.diagram-title {
-    margin-right: auto;
 }
 
 .canvas {
@@ -404,4 +405,109 @@ img {
 .red-item:hover {
     cursor: pointer;
     color: red;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0px;
+    line-height: 0px;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+.burger-icon {
+    display: block;
+    cursor: pointer;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+.mobile-menu {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.close-mob-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    transition: transform, .5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.close-mob-btn::before,
+.close-mob-btn::after {
+    position: absolute;
+    left: 15px;
+    content: "";
+    width: 2px;
+    height: 20px;
+    background-color: #000000;
+}
+
+.close-mob-btn::before {
+    transform: rotate(45deg);
+}
+
+.close-mob-btn::after {
+    transform: rotate(-45deg);
+}
+
+.mob-container {
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    background-color: #1a2432;
+}
+
+.mob-item {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 24px;
+    text-shadow: 0.7px 0.7px 1px #494949;
+    margin-top: 20px;
+}
+
+.mob-item {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 24px;
+    text-shadow: 0.7px 0.7px 1px #494949;
 }
