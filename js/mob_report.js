@@ -1,8 +1,11 @@
 const repBtn2 = document.getElementById('rep2');
+const hideBtn = document.getElementById('hide');
 const result2 = document.getElementById('report2-result');
+
 
 repBtn2.addEventListener("click", () => {
     result2.classList.remove("visually-hidden");
+    hideBtn.classList.remove("visually-hidden");
     let reportCounter = localStorage.getItem("currentCounter");
     let word;
 
@@ -19,5 +22,11 @@ repBtn2.addEventListener("click", () => {
     else {
         result2.textContent = `Вы построили отчёт ${reportCounter} ${word}`;
     }
+
+});
+
+hideBtn.addEventListener("click", () => {
+    result2.classList.add("visually-hidden");
+    hideBtn.classList.add("visually-hidden");
 
 });
