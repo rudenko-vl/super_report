@@ -523,6 +523,18 @@ img {
     margin-top: 20px;
 }
 
+.item-input {
+    display: flex;
+    align-items: center;
+}
+
+.report-input {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
 .mob-link {
     text-decoration: none;
     color: rgb(255, 255, 255);
