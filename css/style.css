@@ -593,6 +593,7 @@ img {
 .main-test_title {
     font-size: 22px;
     text-align: center;
+    color: #ff5252;
 }
 
 @media screen and (min-width: 768px) {
@@ -644,6 +645,7 @@ img {
 
 .test-link {
     margin-left: 0;
+    margin-top: 30px;
 }
 
 .test_list-item {
