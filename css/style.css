@@ -638,10 +638,20 @@ img {
     text-align: center;
 }
 
+.last-title {
+    text-align: center;
+}
+
 .test-link {
     margin-left: 0;
 }
 
 .test_list-item {
     margin-bottom: 20px;
+}
+
+.common-item_test:hover {
+    transform: scale(1.07);
+    color: aqua;
+    transition: transform, 0.3s cubic-bezier(.4, 0, .2, 1);
 }
