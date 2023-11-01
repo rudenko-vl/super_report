@@ -45,6 +45,10 @@ img {
     text-decoration: none;
 }
 
+.test-link {
+    text-decoration: none;
+}
+
 /* Modal ========================== */
 .backdrop,
 .backdrop2 {
@@ -567,4 +571,73 @@ img {
     background-color: rgb(94, 95, 6);
     color: #ffffff;
     transition-duration: 0.5s;
+}
+
+.test_container {
+    background-color: #1a2432;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: 30px auto;
+}
+
+@media screen and (min-width: 768px) {
+    .test_container {
+        width: 600px;
+    }
+}
+
+.main-test_title {
+    font-size: 22px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .main-test_title {
+        font-size: 34px;
+    }
+}
+
+.test_title {
+    margin: 20px 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .test_title {
+        font-size: 30px;
+    }
+}
+
+.test_list {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.test_img {
+    width: 200px;
+    height: 300px;
+}
+
+@media screen and (min-width: 768px) {
+    .test_img {
+        width: 400px;
+        height: 500px;
+    }
+}
+
+.last_info {
+    margin: 30px auto;
+    color: #25b808;
+    text-align: center;
+}
+
+.test-link {
+    margin-left: 0;
 }

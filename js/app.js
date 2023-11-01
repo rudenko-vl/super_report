@@ -51,6 +51,8 @@ const txt3 = document.querySelector(".text-3");
 const last_text = document.querySelector(".last-text");
 const spinner = document.querySelector(".spinner");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+const labels = document.querySelectorAll('label');
+
 
 const setText = () => {
     txt.textContent = ''
@@ -83,30 +85,32 @@ btn3.addEventListener("click", () => {
     location.reload();
 });
 
-checkboxes.forEach((checkbox) => {
+checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener('change', () => {
         const atLeastOneChecked = Array.from(checkboxes).some((checkbox) => checkbox.checked);
         btn4.disabled = !atLeastOneChecked;
         if (atLeastOneChecked) {
             btn4.classList.remove("disabled_btn");
+            let labelText = labels[index].textContent;
+            localStorage.setItem('action', labelText);
         } else {
             btn4.classList.add("disabled_btn");
         }
     });
 });
 
-btn4.addEventListener("click", () => {
-    btn.classList.add("visually-hidden");
-    txt2.classList.add("visually-hidden");
-    txt3.classList.add("visually-hidden");
-    btn4.classList.add("visually-hidden");
-    txt.classList.add("visually-hidden");
-    spinner.classList.remove("visually-hidden");
-    setTimeout(() => {
-        spinner.classList.add("visually-hidden");
-        last_text.classList.remove("visually-hidden");
-        btn3.classList.remove("visually-hidden");
-    }, 1000)
-});
+// btn4.addEventListener("click", () => {
+//     btn.classList.add("visually-hidden");
+//     txt2.classList.add("visually-hidden");
+//     txt3.classList.add("visually-hidden");
+//     btn4.classList.add("visually-hidden");
+//     txt.classList.add("visually-hidden");
+//     spinner.classList.remove("visually-hidden");
+//     setTimeout(() => {
+//         spinner.classList.add("visually-hidden");
+//         last_text.classList.remove("visually-hidden");
+//         btn3.classList.remove("visually-hidden");
+//     }, 1000)
+// });
 
 
