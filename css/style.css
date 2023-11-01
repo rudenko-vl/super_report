@@ -641,3 +641,7 @@ img {
 .test-link {
     margin-left: 0;
 }
+
+.test_list-item {
+    margin-bottom: 20px;
+}
