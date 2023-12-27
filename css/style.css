@@ -710,27 +710,47 @@ img {
     margin-top: 20px;
 }
 
-
 .decor-link {
+    display: inline-block;
     text-decoration: none;
     color: #ffffff;
     text-shadow: 0.7px 0.7px 1px #3d4110;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 700;
-    margin-left: 25px;
-    animation: blink 2s infinite;
+    animation: heartbeat 1.3s infinite;
+    margin: 20px 0px 20px 200px;
 }
 
-@keyframes blink {
+@keyframes heartbeat {
     0% {
-        color: white;
+        transform: scale(1);
     }
 
     50% {
-        color: rgb(32, 250, 32);
+        transform: scale(1.2);
     }
 
     100% {
-        color: white;
+        transform: scale(1);
+    }
+}
+
+.yanik {
+    width: 330px;
+    height: 330px;
+
+}
+
+.decor-block {
+    display: none;
+    position: absolute;
+    top: 110px;
+    left: 10px;
+}
+
+@media screen and (min-width: 810px) {
+    .decor-block {
+        display: block;
+
     }
 }
