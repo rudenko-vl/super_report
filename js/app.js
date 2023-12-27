@@ -40,15 +40,14 @@ const getSecondText = () => {
     }
 }
 
-
+const box = document.getElementById('test_container');
 const btn = document.querySelector(".btn");
 const btn2 = document.querySelector(".btn-2");
-const btn3 = document.querySelector(".btn-3");
 const btn4 = document.querySelector(".btn-4");
 const txt = document.querySelector(".text");
 const txt2 = document.querySelector(".text-2");
 const txt3 = document.querySelector(".text-3");
-const last_text = document.querySelector(".last-text");
+const mainBox = document.querySelector(".main-box");
 const spinner = document.querySelector(".spinner");
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const labels = document.querySelectorAll('label');
@@ -59,7 +58,6 @@ const setText = () => {
     txt2.classList.add("visually-hidden");
     txt3.classList.add("visually-hidden");
     btn2.classList.add("visually-hidden");
-    btn3.classList.add("visually-hidden");
     setTimeout(() => {
         spinner.classList.add("visually-hidden");
     }, 1000)
@@ -81,9 +79,6 @@ btn2.addEventListener("click", () => {
     getSecondText()
 });
 
-btn3.addEventListener("click", () => {
-    location.reload();
-});
 
 checkboxes.forEach((checkbox, index) => {
     checkbox.addEventListener('change', () => {
@@ -99,18 +94,12 @@ checkboxes.forEach((checkbox, index) => {
     });
 });
 
-// btn4.addEventListener("click", () => {
-//     btn.classList.add("visually-hidden");
-//     txt2.classList.add("visually-hidden");
-//     txt3.classList.add("visually-hidden");
-//     btn4.classList.add("visually-hidden");
-//     txt.classList.add("visually-hidden");
-//     spinner.classList.remove("visually-hidden");
-//     setTimeout(() => {
-//         spinner.classList.add("visually-hidden");
-//         last_text.classList.remove("visually-hidden");
-//         btn3.classList.remove("visually-hidden");
-//     }, 1000)
-// });
+btn4.addEventListener("click", () => {
+    setTimeout(() => {
+        box.classList.remove("visually-hidden");
+        mainBox.classList.add("visually-hidden");
+    }, 500)
+
+});
 
 
