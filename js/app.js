@@ -68,6 +68,7 @@ const setText = () => {
 }
 
 btn.addEventListener("click", () => {
+    localStorage.setItem('action', '');
     txt.classList.remove("visually-hidden");
     btn4.classList.add("visually-hidden");
     getRandomText()
@@ -101,5 +102,3 @@ btn4.addEventListener("click", () => {
     }, 500)
 
 });
-
-

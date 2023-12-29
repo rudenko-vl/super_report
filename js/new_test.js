@@ -10,8 +10,11 @@ box.addEventListener('click', (event) => {
 
     target.style.color = 'green';
     let option = localStorage.getItem("action") || '?'
+
+    const workers = JSON.parse(localStorage.getItem('culprits'))
+    const lastElement = workers.pop()
     const final = `<h1 class="last-title">Вы успешно прошли тест!</h1>
-        <h2 class="last_info">Действие "${option}" будет выполнено</h2>
+        <h2 class="last_info">Действие "${option}" с ${lastElement} будет выполнено</h2>
          <a class="nav-link test-link" href="./index.html">На главную страницу</a>
         `
     const arr = [first, two, three, final]
