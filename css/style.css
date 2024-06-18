@@ -140,7 +140,7 @@ img {
     background-color: rgb(153, 153, 160);
 }
 
-.tooltip-button {
+.tooltip-button, .super-button {
     position: relative;
     background-color: blue;
     color: white;
@@ -152,6 +152,7 @@ img {
     cursor: pointer;
     margin-right: 15px;
 }
+
 
 .tooltip-button::before {
     content: "Отчёт по кол-ву построенных отчётов!";
