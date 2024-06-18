@@ -152,7 +152,16 @@ img {
     cursor: pointer;
     margin-right: 15px;
 }
+.super-button {
+    display: none;
+    margin-left: 20px;
+}
 
+@media screen and (min-width: 480px) {
+    .super-button {
+       display: block;
+    }
+}
 
 .tooltip-button::before {
     content: "Отчёт по кол-ву построенных отчётов!";
